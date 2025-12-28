@@ -5,6 +5,7 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 enableRobotsTXT = true
 enableGitInfo = true
+publishDir = "docs"
 footnotereturnlinkcontents = "↩"
 
 [module.hugoVersion]
