@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<footer class="footer" style="margin-top: 0.1rem;">
+
+  <div class="footer-content">
+
+    {{ partial "comments.html" . }}
+    {{ partial "foot_custom.html" . }}
+
+    <!-- <ul class="footer-links">
+        <li> -->
+          <div class="code" style="margin-bottom: 0.75rem;">
+          <a href="https://themes.gohugo.io/themes/hugo-ht/" target="_blank" class="footer-link-flex">Made with Hugo-HT |</a>
+        <!-- </li> -->
+
+        <!-- {{ with .Site.Params.GithubRepo }} -->
+        <!-- <li> -->
+          <a href="github.com/theyoungwriter-tk/REPONAME" target="_blank" class="footer-link-flex">
+            Github Repo
+          </a> </div>
+
+          <div class="social" style="margin-bottom: 0.75rem;">
+          <a href="https://github.com/theyoungwriter-tk/" target="_blank" class="footer-link-flex"><i class="fa-brands fa-github" style="font-size: 36px; margin-left: 4px;"></i></a>
+          <a href="https://instagram.com/dashingdeveloper/" target="_blank" class="footer-link-flex"><i class="fa-brands fa-instagram" style="font-size: 36px; margin-left: 4px;"></i></a>
+          <a href="https://instagram.com/dashingdeveloper/" target="_blank" class="footer-link-flex"><i class="fa-brands fa-discord" style="font-size: 36px; margin-left: 4px;"></i></a>
+          </div>
+        <!-- </li> -->
+        <!-- {{ end }} -->
+
+        <!-- <li>
+          <a href="{{ "index.xml" | relLangURL }}" type="application/rss+xml" title="RSS feed" class="footer-link-flex">
+            {{ i18n "subscribe" }}
+            <i class="fa fa-rss-square" aria-hidden="true" title="RSS"></i>
+          </a>
+        </li>
+      
+
+        <li>
+          <a class="footer-link-flex" href="{{ .Site.Params.licenseURL }}" target="_blank">
+            {{ i18n "license" }}
+            <i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i>
+          </a>
+        </li>           -->
+
+    <!-- </ul> -->
+
+    <div class="footer-meta">
+      {{ with .Site.Params.copyright }}
+        {{ . | markdownify }}
+      {{ end }}
+      
+      {{ i18n "author" }}
+    
+      {{ $startYear := .Site.Params.copyrightYearStart }}
+      {{ $currentYear := now.Year }}
+      
+      {{ $startYear }}—
+    </div>
+    
+
+  </div>
+
+</footer>
+
+<style>
+.footer .content {
+  display: none;
+}
+</style>
+
